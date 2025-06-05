@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Redirect - Quick Access</title>
+    <style>
+        /* Compact styling for the popup interface */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 320px;
+            min-height: 200px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .popup-container {
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 1.4em;
+            margin-bottom: 5px;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .stats {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .stats-number {
+            font-size: 2em;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stats-label {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .quick-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .button-icon {
+            font-size: 16px;
+        }
+
+        .current-site {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+        }
+
+        .current-site strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .site-status {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 600;
+        }
+
+        .site-status.redirected {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .site-status.normal {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-container">
+        <div class="header">
+            <h1>Smart Redirect</h1>
+            <p>Quick access & status</p>
+        </div>
+
+        <div class="current-site">
+            <strong>Current Site:</strong>
+            <span id="currentSite">Loading...</span>
+            <br>
+            <span id="siteStatus" class="site-status normal">No redirect rule</span>
+        </div>
+
+        <div class="stats">
+            <span id="ruleCount" class="stats-number">0</span>
+            <span class="stats-label">Active Rules</span>
+        </div>
+
+        <div class="quick-actions">
+            <button id="openSettings" class="button">
+                <span>Open Settings</span>
+                <span class="button-icon">⚙️</span>
+            </button>
+            
+            <button id="addQuickRule" class="button">
+                <span>Add Rule for Current Site</span>
+                <span class="button-icon">➕</span>
+            </button>
+            
+            <button id="toggleExtension" class="button">
+                <span>Disable Extension</span>
+                <span class="button-icon">🔄</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
