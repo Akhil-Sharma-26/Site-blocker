@@ -21,3 +21,5 @@ A professional Firefox extension that automatically redirects specified websites
 - Click "This Firefox" in the left sidebar
 - Click "Load Temporary Add-on..."
 - Select this extension and enjoy
+
+> I've applied to the Firefox `addons` page. Lets' see what they think about it.
