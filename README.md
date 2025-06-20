@@ -1,5 +1,6 @@
 # Site-blocker
-A firefox add-on which lets user to block certain sites they want to block and redirect to customizable sites.
+A firefox add-on which lets user to block certain sites they want to block and redirect to customizable sites. </br>
+[Check out the extension here](https://addons.mozilla.org/en-US/firefox/addon/redirecter/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)
 # Smart Redirect Firefox Extension
 
 A professional Firefox extension that automatically redirects specified websites to destinations of your choice. Perfect for productivity, blocking distracting sites, or redirecting to preferred alternatives.
@@ -22,4 +23,3 @@ A professional Firefox extension that automatically redirects specified websites
 - Click "Load Temporary Add-on..."
 - Select this extension and enjoy
 
-> I've applied to the Firefox `addons` page. Lets' see what they think about it.
